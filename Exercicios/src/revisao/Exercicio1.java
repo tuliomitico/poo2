@@ -1,3 +1,5 @@
+package revisao;
+
 public class Exercicio1 {
     public static void main(String[] args) {
         String palavra = "Verdade";

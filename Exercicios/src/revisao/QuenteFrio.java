@@ -1,3 +1,5 @@
+package revisao;
+
 import java.util.Scanner;
 
 public class QuenteFrio {
