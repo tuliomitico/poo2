@@ -14,16 +14,14 @@ public class QuenteFrio {
         if (valor == chute) {
             System.out.println("Acertou!");
             vitoria = true;
+        } else if (Math.abs(valor - chute) < 12) {
+            System.out.println("Muito quente");
         }
-        else if (Math.abs(valor - chute) > 25) {
+        else if (Math.abs(valor - chute) < 25) {
             System.out.println("Quente");
         }
-        else if (Math.abs(valor - chute) > 50) {
+        else if (Math.abs(valor - chute) < 50) {
             System.out.println("Frio");
-        } else if (Math.abs(valor - chute) > 12) {
-            System.out.println("Muito quente");
-
-
         }
 
 
