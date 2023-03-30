@@ -18,7 +18,7 @@ public class SequentialLineCounter {
         this.file = file;
     }
 
-    public void countLines() {
+    public SequentialLineCounter countLines() {
         numLines = 0;
         try (LineNumberReader reader = new LineNumberReader(new FileReader(file))) {
             while (reader.readLine() != null) {
@@ -27,7 +27,8 @@ public class SequentialLineCounter {
         } catch (IOException e) {
             e.printStackTrace();
         }
-        System.out.println("O arquivo " + file.getName() + " tem " + numLines + " linhas.");
+        //System.out.println("O arquivo " + file.getName() + " tem " + numLines + " linhas.");
+        return this;
     }
 
     public int getNumLines() {

@@ -23,3 +23,7 @@
 hs_err_pid*
 /Exercicios/nbproject/private/
 /Exercicios/build/
+
+# Large datasets
+/Exercicios/src/threads/data/**
+/out/production/poo2/threads/data/**
