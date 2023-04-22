@@ -1,5 +1,7 @@
 package rpg;
 
+import java.util.Random;
+
 public class PersonagemBuilder implements  Builder {
     private Profissao klasse;
     private String name;
@@ -23,11 +25,12 @@ public class PersonagemBuilder implements  Builder {
 
     @Override
     public void setAleatorio() {
-        /* TODO
-        *  Setar os atributos de maneira aleatoria
-        * */
+        int randomEquip = new Random().nextInt(Equipamento.values().length);
+        int randomProfissao = new Random().nextInt(Profissao.values().length);
+        this.equip = Equipamento.values()[randomEquip];
+        this.klasse = Profissao.values()[randomProfissao];
     }
     public Personagem character() {
-        return new Personagem(name, klasse,equip);
+        return new Personagem(name, klasse, equip);
     }
 }

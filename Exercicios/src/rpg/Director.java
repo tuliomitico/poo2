@@ -1,10 +1,15 @@
 package rpg;
 
 public class Director {
-    public void constructMago(Builder builder) {
-        builder.setNome("Cachorão Mil Grau");
-        builder.setProfissao(Profissao.MAGO);
-        builder.setEquipamento(Equipamento.FACA);
+    public void construct(Builder builder,String nome, Profissao klasse, Equipamento equip) {
+        builder.setNome(nome);
+        builder.setProfissao(klasse);
+        builder.setEquipamento(equip);
+    }
+
+    public void construct(Builder builder, String nome, Profissao klasse) {
+        builder.setNome(nome);
+        builder.setProfissao(klasse);
     }
     public void constructGuerreiro(Builder builder) {
         builder.setNome("Galo cego");
@@ -15,5 +20,9 @@ public class Director {
         builder.setNome("Luiz Inácio Lula da Silva");
         builder.setProfissao(Profissao.BANDIDO);
         builder.setEquipamento(Equipamento.ANEL);
+    }
+    public void constructAleatorio(Builder builder, String name) {
+        builder.setNome(name);
+        builder.setAleatorio();
     }
 }
