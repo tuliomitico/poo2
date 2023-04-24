@@ -10,6 +10,7 @@ public class Director {
     public void construct(Builder builder, String nome, Profissao klasse) {
         builder.setNome(nome);
         builder.setProfissao(klasse);
+        builder.setEquipamento(Equipamento.ESPADA);
     }
     public void constructGuerreiro(Builder builder) {
         builder.setNome("Galo cego");
