@@ -3,6 +3,7 @@ package observer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class PrevisaoTempo implements Observable{
     private double temperatura;
@@ -15,8 +16,17 @@ public class PrevisaoTempo implements Observable{
     public void mudarEstadoAleatoriamente() {
         Random random = new Random();
         temperatura = random.nextDouble() * 40;
+        umidade = random.nextDouble() * 100;
+        chuva = random.nextBoolean();
+        velocidadeVento = random.nextDouble() * 100;
+        notifyObservers();
     }
-
+    public void executar() throws InterruptedException {
+        while (true) {
+            mudarEstadoAleatoriamente();
+            TimeUnit.SECONDS.sleep(5);
+        }
+    }
     @Override
     public void addObserver(Observer observer) {
         observers.add(observer);
